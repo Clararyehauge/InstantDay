@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
@@ -7,6 +7,22 @@
 
 @theme {
   /* Her tilføjes theme variable // tokens */
+
+  --color-bg-100: #fffaf3;
+  --color-bg-300: #fffaf3;
+  --color-bg-500: #fffaf3;
+
+  --color-bg2-100: #fff3e2;
+  --color-bg2-300: #fff3e2;
+  --color-bg2-500: #fff3e2;
+
+  --color-prim-100: #b4412f;
+  --color-prim-300: #b4412f;
+  --color-prim-500: #b4412f;
+
+  --color-knap-100: #b4412f;
+  --color-knap-300: #b4412f;
+  --color-knap-500: #b4412f;
 }
 
 @layer base {
@@ -19,9 +35,7 @@
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
 }
