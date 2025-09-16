@@ -5,16 +5,31 @@
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
 
+.instrument-sans {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.notable-regular {
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @theme {
   /* Her tilføjes theme variable // tokens */
 
+  /*farver*/
   --color-bg-500: #fffaf3;
-
   --color-bg2-500: #fff3e2;
-
   --color-prim-500: #b4412f;
-
   --color-knap-500: #b4412f;
+
+  /*Fonte*/
+  --font-notable: "Notable", sans-serif;
+  --font-instrument-sans: "Instrument Sans", sans-serif;
 }
 
 @layer base {
