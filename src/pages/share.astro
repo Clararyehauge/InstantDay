@@ -5,21 +5,114 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import Header from "../components/Header.astro";
+import Note from "../components/Note.astro";
 ---
 
 <MainLayout title="Titel">
-  <section class="bg-prim-500">
-    <h2>READY TO SHARE</h2>
-    <h1>YOUR INSTANTS?</h1>
-    <img src="" alt="pil ned" />
+  <section class="bg-bg-500">
+  <section class="bg-prim-500 font-notable text-bg-500 pt-75 pb-20 lg:pt-60">
+    <div class="m-auto justify-items-center"><h2 class="text-[24px] lg:text-[55px]">READY TO SHARE</h2>
+    <h1 class="text-[40px] lg:text-[110px]">YOUR INSTANTS?</h1></div>
+    <img src="/public/pilned.svg" alt="pil ned" width="30" class="m-auto pt-75 lg:pt-40 animate-bounce animate-infinite animate-duration-[2000ms]"/>
   </section>
-  <section>
-    <p>Got an instant photo ready for the public?</p>
-    <div>
-      <img src="" alt="" /><img src="" alt="" /><img src="" alt="" /><img src="" alt="" />
+  <section class="m-20 justify-items-center">
+    <p class="font-instrument-sans text-[24px]">Got an <b>instant photo</b> ready for the public?</p>
+    <section class="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6">
+    <div class="rotate-[-6deg]">
+      <Note>1. Take a photo of your instant with your smartphone (or scan it for max. quality) - the file should be between 2 - 10 MB, in jpg/jpeg or webp format.</Note>
     </div>
-    <h2>SUBMIT YOUR INSTANT</h2>
-    <form></form>
-    <button></button>
+      <div class="rotate-[6deg]">
+      <Note>2. Upload your photo and credentials in the form below </Note>
+    </div>
+     <div class="rotate-[-6deg]">
+      <Note>3. Agree to our terms and conditions [anchor til “terms and conditions” sektionen]. The short version: Participants have to be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest.</Note>
+    </div>
+     <div class="rotate-[6deg]">
+      <Note>4. You can make up to 5 submissions - go through step 1-3 for each submission;-) </Note>
+    </div>
+ </section>
+  </section>
+
+<section class="bg-bg2-500 py-10 px-6">
+  <div class="max-w-6xl mx-auto">
+    <form class="grid grid-cols-1 lg:grid-cols-2 gap-10" action="#" method="post">
+
+      <div class="w-full lg:max-w-lg mx-auto">
+        <h2 class="font-notable text-[28px] text-prim-500 mb-6">SUBMIT YOUR INSTANT</h2>
+
+        <div class="space-y-6">
+          <div>
+            <label class="block mb-1 font-instrument-sans">Your full name</label>
+            <input 
+              name="name"
+              type="text" 
+              placeholder="example..." 
+              class="w-full p-3 bg-bg2-500 shadow-inner placeholder-gray-400 focus:outline-none"
+            />
+          </div>
+
+          <div>
+            <label class="block mb-1 font-instrument-sans">Your email</label>
+            <input 
+              name="email"
+              type="email" 
+              placeholder="example..." 
+              class="w-full p-3 bg-bg2-500 shadow-inner placeholder-gray-400 focus:outline-none"
+            />
+          </div>
+
+          <div class="flex items-start space-x-2">
+            <input name="agree" type="checkbox" class="mt-1" />
+            <label class="text-sm font-instrument-sans">
+              I have read and agree to the terms and conditions
+              <a href="#" class="underline">Read more</a>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- HØJRE KOLONNE -->
+      <div class="max-w-md mx-auto">
+        <div class="relative">
+          <img src="/public/klemme_rød.svg" alt="clip" class="absolute -top-8 left-1/2 -translate-x-1/2 w-12 h-12" />
+
+          <div class="bg-white shadow-lg p-6">
+            <div class="bg-gray-200 w-full h-64 flex items-center justify-center text-gray-500 font-instrument-sans">
+              Upload your image
+            </div>
+
+            <div class="mt-4">
+              <label class="block mb-1 font-instrument-sans">Submission title</label>
+              <input 
+                name="title"
+                type="text" 
+                placeholder="example..." 
+                class="w-full p-3 bg-gray-100 shadow-inner rounded-sm placeholder-gray-400 focus:outline-none"
+              />
+            </div>
+
+            <div class="mt-4">
+              <label class="block mb-1 font-instrument-sans">Submission description</label>
+              <textarea 
+                name="description"
+                placeholder="example..." 
+                rows="3"
+                class="w-full p-3 bg-gray-100 shadow-inner rounded-sm placeholder-gray-400 focus:outline-none"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit"
+          class="mt-6 w-full bg-prim-500 text-bg-500 py-3 px-6 rounded-md shadow-md hover:bg-prim-900 transition">
+          Submit my instant
+        </button>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+
   </section>
 </MainLayout>
