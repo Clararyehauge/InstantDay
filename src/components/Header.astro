@@ -2,14 +2,50 @@
 
 ---
 
-<section>
-  <nav>
-    <ul class="">
-      <li><a href="/index/">Home</a></li>
-      <li><a href="/info/">Info</a></li>
-      <li><a href="/inspiration/">Inspiration</a></li>
-      <li><a href="/winnersandnominees/">Winners</a></li>
-      <li><a href="/share/">Save the date</a></li>
+<div x-data="{ open: false }" class="bg-bg-500 border-b-2 border-prim-500">
+  <div class="flex justify-between items-center p-5 pr-10 pl-10">
+    <div class=""><img src="/instantlogo.svg" alt="logo" class="w-10 h-auto" /></div>
+    <button @click="open = !open" class="lg:hidden text-black">
+      <div class="w-8 h-8 relative">
+        <svg x-show="!open" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="butt" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+
+        <svg x-show="open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="butt" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </div>
+    </button>
+    <div class="hidden lg:flex">
+      <ul class="lg:flex flex-row justify-evenly gap-6 font-instrument-sans">
+        <li class=""><a class="group hover:text-prim-500" href="/index/"> Home<div class="bg-prim-500 h-[2px] w-0 group-hover:w-full transition-all duration-300"></div></a></li>
+
+        <li class=""><a class="group hover:text-prim-500" href="/info/"> Info<div class="bg-prim-500 h-[2px] w-0 group-hover:w-full transition-all duration-300"></div></a></li>
+
+        <li class=""><a class="group hover:text-prim-500" href="/inspiration/"> Inspiration<div class="bg-prim-500 h-[2px] w-0 group-hover:w-full transition-all duration-300"></div></a></li>
+
+        <li class=""><a class="group hover:text-prim-500" href="/winnersandnominees/"> Winners<div class="bg-prim-500 h-[2px] w-0 group-hover:w-full transition-all duration-300"></div></a></li>
+
+        <li class="font-bold text-prim-500"><a class="group" href="/share/"> Save the date<div class="bg-prim-500 h-[2px] w-0 group-hover:w-full transition-all duration-300"></div></a></li>
+      </ul>
+    </div>
+  </div>
+  <div
+    x-show="open"
+    x-transition:enter="transform ease-out duration-300 transition-translate-opacity"
+    x-transition:enter-start="-translate-y-10 opacity-0"
+    x-transition:enter-end="translate-y-0 opacity-100"
+    x-transition:leave="transform ease-in duration-300 transition-translate-opacity"
+    x-transition:leave-start="translate-y-0 opacity-100"
+    x-transition:leave-end="-translate-y-10 opacity-0"
+    class="lg:hidden"
+  >
+    <ul class="font-instrument-sans text-center pb-5 flex flex-col gap-4">
+      <li class=""><a href="/index/">Home</a></li>
+      <li class=""><a href="/info/">Info</a></li>
+      <li class=""><a href="/inspiration/">Inspiration</a></li>
+      <li class=""><a href="/winnersandnominees/">Winners</a></li>
+      <li class="font-bold text-prim-500"><a href="/share/">Save the date</a></li>
     </ul>
-  </nav>
-</section>
+  </div>
+</div>
