@@ -8,28 +8,54 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 <MainLayout title="Titel">
   <section class="bg-bg-500 p-10 md:p-20">
-    <div class="grid grid-cols-2 md:grid-cols-2">
+    <div class="grid md:grid-cols-2">
       <h1 class="font-notable text-[50px] md:text-[110px] text-prim-500 mt-10 md:mt-25">INFO</h1>
       <div class="relative w-[350px] md:w-[500px]">
         <img src="/info_kamera.webp" alt="kamera" class="w-full h-auto" />
-        <section class="absolute top-72 left-14 md:top-102 md:left-19 bg-knap-500 p-5 md:p-10 w-7/10 md:w-7/10 shadow-lg">
+        <section class="absolute top-72 left-14 md:top-102 md:left-19 bg-knap-500 p-5 md:p-10 w-7/10 md:w-7/10 shadow-2xl" style="box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2);">
           <h2 class="font-notable text-[20px] md:text-[25px] mb-2 text-prim-500">WHO ARE WE?</h2>
-          <p class="text-[14px] md:text-[16px]">
-            Instant Day is a small project run by a couple of lecturers from the Multimedia Design programme at EK, Business Academy Copenhagen.<br />
-            Instant Day is a bi-annual project where lecturers and students collaborate on a digital design and communication project related to the Instant Day competition. In essence, we just want to promote instant photography and have fun while doing it. Cheers.
-          </p>
+          <p class="text-[14px] md:text-[16px] font-instrument-sans">Instant Day is a small project run by a couple of lecturers from the Multimedia Design programme at EK, Business Academy Copenhagen.</p><br />
+          <p class="text-[14px] md:text-[16px] font-instrument-sans">Instant Day is a bi-annual project where lecturers and students collaborate on a digital design and communication project related to the Instant Day competition. In essence, we just want to promote instant photography and have fun while doing it. Cheers.</p>
         </section>
       </div>
     </div>
   </section>
-  <section class="bg-bg-500 p-10 md:p-20 pt-80 md:pt-68">
+  <section class="bg-bg-500 pl-10 md:p-10 pt-90 md:pt-80">
     <h2 class="font-notable text-[24px] md:text-[40px] text-prim-500">THE JUDGES</h2>
   </section>
-  <section class="grid grid-cols-2 bg-bg-500 p-10 md:p-20">
-    <div>
-      <h2 class="font-notable text-[24px] md:text-[40px] text-prim-500 mb-2">SPONSERS</h2>
-      <p class="text-[14px] md:text-[16px] w-120">Instant Day is not affiliated to any companies within the Instant Photography industry. The only organisation backing us is EK - Business Academy Copenhagen. At least so far.</p>
+  <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 bg-bg-500 gap-3 p-5 md:gap-0 md:p-0">
+    <div class="bg-bg2-500">
+      <img src="/stefan.webp" alt="stefan" class="p-8" />
+      <p class="font-instrument-sans text-[16px] md:text-[20px] pl-8 font-bold">Stefan Grage</p>
+      <p class="font-instrument-sans text-[14px] md:text-[16px] pl-8 pb-7">Associate lecturer, Multimedia Design programme at EK</p>
     </div>
-    <img src="/ek_logo.webp" alt="ek_logo" />
+    <div class="bg-prim-500">
+      <img src="/birgitte.webp" alt="birgitte" class="p-8" />
+      <p class="font-instrument-sans text-[16px] md:text-[20px] pl-8 font-bold">Birgitte Heide</p>
+      <p class="font-instrument-sans text-[14px] md:text-[16px] pl-8 pb-7">Associate lecturer, Multimedia Design programme at EK</p>
+    </div>
+    <div class="bg-knap-500">
+      <img src="/jonas.webp" alt="jonas" class="p-8" />
+      <p class="font-instrument-sans text-[16px] md:text-[20px] pl-8 font-bold">Jonas Hasle</p>
+      <p class="font-instrument-sans text-[14px] md:text-[16px] pl-8 pb-7">Assistant lecturer, Multimedia Design programme at EK</p>
+    </div>
+    <div class="bg-bg2-500">
+      <img src="/anders.webp" alt="anders" class="p-8" />
+      <p class="font-instrument-sans text-[16px] md:text-[20px] pl-8 font-bold">Anders Dollerup</p>
+      <p class="font-instrument-sans text-[14px] md:text-[16px] pl-8 pb-7">Associate lecturer, Multimedia Design programme at EK</p>
+    </div>
+    <div class="bg-prim-500">
+      <img src="/christian.webp" alt="christian" class="p-8" />
+      <p class="font-instrument-sans text-[16px] md:text-[20px] pl-8 font-bold">Christian Ditlevsen</p>
+      <p class="font-instrument-sans text-[14px] md:text-[16px] pl-8 pb-7">Student on the Multimedia Design programme at KEA</p>
+    </div>
+  </div>
+
+  <section class="grid md:grid-cols-2 bg-bg-500 p-10 md:p-30 md:pl-60">
+    <div>
+      <h2 class="font-notable text-[24px] md:text-[40px] text-prim-500 mb-2 pb-5">SPONSERS</h2>
+      <p class="font-instrument-sans text-[14px] md:text-[16px] w-120 max-w-88 md:max-w-130">Instant Day is not affiliated to any companies within the Instant Photography industry. The only organisation backing us is EK - Business Academy Copenhagen. At least so far.</p>
+    </div>
+    <img src="/ek_logo.webp" alt="ek_logo" class="pt-10 max-w-[200px] md:max-w-[300px] h-auto" />
   </section>
 </MainLayout>
