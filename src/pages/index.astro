@@ -8,64 +8,83 @@ import Header from "../components/Header.astro";
 ---
 
 <MainLayout title="Titel">
-  <section>
-    <div>
-      <div>
-        <img src="" alt="" /><img src="" alt="" />
+  <section class="bg-bg-500">
+    <article class="p-10 mb-6">
+      <div class="grid grid-cols-1 h-full">
+        <img src="/hero1.png" alt="hero 1" width="250" class="col-start-1 row-start-1 -rotate-2 ml-2" />
+        <img src="/hero2.png" alt="hero 2" width="230" class="col-start-1 row-start-1 m-auto rotate-10 mr-3 mt-30 drop-shadow-xl" />
       </div>
-      <h1>INSTANT DAY</h1>
-      <button></button>
+
+      <div class="mt-10">
+        <div class="mb-10">
+          <h1 class="font-notable text-6xl text-prim-500">INSTANT</h1>
+          <h1 class="font-notable text-6xl text-prim-500">DAY</h1>
+        </div>
+        <Button color="cream" size="medium"><a href="/share/">Ready to share your instant&#63;</a></Button>
+      </div>
+    </article>
+    <article class="p-5 pt-10 pb-10 bg-prim-500">
+      <h1 class="font-instrument-sans text-bg-500 text-[4.8em] text-center">OCT 18 2025</h1>
+      <p class="font-instrument-sans text-bg-500 text-base/7 text-left w-115 m-auto">
+        is Instant day, a day all about celebrating instant photography. So get out your Polaroid, Instax or whatever instant photography camera you are using, and show us your instants.
+      </p>
+    </article>
+  </section>
+  <section class="bg-bg-500 p-10 py-15">
+    <div class="flex flex-col gap-10 mb-15">
+      <h2 class="font-notable text-3xl text-prim-500">WHAT IS INSTANT DAY?</h2>
+      <p class="font-instrument-sans text-black text-base/7">
+        Instant Day isn&#39;t really a photo competition, it&#39;s more a homage to good old analogue, instant photography - everybody who participates are winners. But we do have a nice prize for one lucky instant photographer!
+      </p>
+      <Button color="red" size="medium">Save the date</Button>
     </div>
-    <div>
-      <h1>OCT 18 2025</h1>
-      <p>is Instant day, a day all about celebrating instant photography. So get out your Polaroid, Instax or whatever instant photography camera you are using, and show us your instants.</p>
+    <div id="kalender" class="w-70 h-70 bg-white border-2 border-prim-500 pb-2 m-auto">
+      <div class="bg-prim-500 p-5">
+        <p class="font-instrument-sans text-bg-500 text-center text-4xl">OCTOBER</p>
+      </div>
+      <div class="grid grid-cols-2 p-5">
+        <p class="col-start-1 font-instrument-sans text-8xl text-prim-500 text-center">18</p>
+        <div class="col-start-2 bg-gray-400 w-25 h-23 m-auto"></div>
+      </div>
+      <div class="w-50 h-[2px] bg-prim-500 m-auto"></div>
+      <p class="font-instrument-sans text-prim-500 text-center text-4xl mt-2">Instant Day</p>
     </div>
   </section>
-  <section>
-    <div>
-      <h2>WHAT IS INSTANT DAY?</h2>
-      <p>Instant Day isn&#39;t really a photo competition, it&#39;s more a homage to good old analogue, instant photography - everybody who participates are winners. But we do have a nice prize for one lucky instant photographer!</p>
-      <button></button>
-    </div>
-    <img src="" alt="" />
-  </section>
-  <section>
-    <h2>WHY INSTANT PHOTOGRAPHY?</h2>
-    <p>Instant Photography is a testament to life: It all started back in the 1940&#39;s with a 3 year old kid.</p>
+  <section class="bg-prim-500 p-10 flex flex-col gap-6">
+    <h2 class="font-notable text-3xl text-bg-500">WHY INSTANT PHOTOGRAPHY?</h2>
+    <p class="font-instrument-sans text-bg-500 text-base/7">Instant Photography is a testament to life: It all started back in the 1940&#39;s with a 3 year old kid.</p>
     <img src="" alt="" />
     <div>
-      <p>She wanted to see her fathers images right away. The father, Edwin Land, embarked on a mission: To invent instant photography.</p>
+      <p class="font-instrument-sans text-bg-500 text-base/7">She wanted to see her fathers images right away. The father, Edwin Land, embarked on a mission: To invent instant photography.</p>
       <img src="" alt="" />
     </div>
     <div>
       <img src="" alt="" />
-      <p>
+      <p class="font-instrument-sans text-bg-500 text-base/7">
         Half a decade later, Edwin Land launched Instant photography and established the Polaroid brand. Instant photography turned into big business in the 70&#39;s and 80&#39;s, until the digital era almost killed the industry. However, the massive
         amount of time wasted on the small screens have spurred a counterreaction: Analogue, off-line experiences have become popular again.
       </p>
     </div>
-    <p>And instant photography is just that: An analogue, life-affirming and tactile photography experience. So let&#39;s celebrate life, and make memories.</p>
+    <p class="font-instrument-sans text-bg-500 text-base/7">And instant photography is just that: An analogue, life-affirming and tactile photography experience. So let&#39;s celebrate life, and make memories.</p>
   </section>
-  <section>
-    <h2>HOW TO PARTICIPATE</h2>
+  <section class="bg-bg-500 p-10 flex flex-col gap-10 font-instrument-sans text-black text-base/7">
+    <h2 class="font-notable text-3xl text-prim-500">HOW TO PARTICIPATE</h2>
     <p>Got an instant photo ready for the public? Sweet! In order to take part in Instant Day:</p>
+
+    <img src="/step1.webp" alt="step 1" width="250" />
     <div>
-      <img src="" alt="" />
       <p>Take a photo of your instant with your smartphone (or scan it for max. quality) The file should be between 2 - 10 MB, in jpg/jpeg or webp format.</p>
-    </div>
-    <div>
+
       <p>Upload your photo and credentials on our Share Your Instant page.</p>
-      <img src="" alt="" />
     </div>
-    <div>
-      <img src="" alt="" />
-      <p>
-        Agree to our terms and conditions (which you can find here). The short version: Participants have to be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest.
-      </p>
-    </div>
-    <div>
-      <p>You can make up to 5 submissions - go through step 1-3 for each submission</p>
-      <img src="" alt="" />
-    </div>
+    <img src="/step2.webp" alt="step 1" width="250" class="ml-auto" />
+
+    <p>Agree to our terms and conditions <span class="italic">(which you can find here)</span>.</p>
+
+    <p>The short version: Participants have to be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest.</p>
+    <img src="/step3.webp" alt="step 1" width="250" />
+
+    <p>You can make up to 5 submissions - go through step 1-3 for each submission</p>
+    <img src="/step4.webp" alt="step 1" width="250" class="ml-auto" />
   </section>
 </MainLayout>
