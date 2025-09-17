@@ -1,5 +1,19 @@
 ---
+const { color = "red", size = "medium" } = Astro.props;
+
+const buttonStyling = "px-6 py-4 rounded-xl cursor-pointer shadow-xl";
+
+const btnColor = {
+  red: "bg-prim-500 text-bg-500 hover:bg-knap-500 hover:text-black duration-200 ease-in-out",
+  cream: "bg-knap-500 text-black hover:bg-prim-500 hover:text-bg-500 duration-200 ease-in-out",
+};
+
+const sizeClasses = {
+  large: "text-xl",
+  medium: "text-md",
+};
 ---
+
 <div>
-    <button class="border-2 border-black"><slot /></button>
+  <button class:list={[buttonStyling, btnColor[color], sizeClasses[size]]}><slot /></button>
 </div>
