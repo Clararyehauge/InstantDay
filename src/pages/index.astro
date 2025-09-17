@@ -8,37 +8,37 @@ import Header from "../components/Header.astro";
 ---
 
 <MainLayout title="Titel">
-  <section class="bg-bg-500">
-    <article class="p-10 mb-6">
-      <div class="grid grid-cols-1 h-full">
-        <img src="/hero1.png" alt="hero 1" width="250" class="col-start-1 row-start-1 -rotate-2 ml-2" />
-        <img src="/hero2.png" alt="hero 2" width="230" class="col-start-1 row-start-1 m-auto rotate-10 mr-3 mt-30 drop-shadow-xl" />
+  <section class="bg-bg-500 lg:grid lg:grid-cols-1 lg:h-170">
+    <article class="p-10 mb-6 lg:col-span-12 lg:col-start-1 lg:row-start-1 lg:grid lg:grid-cols-12 lg:pt-5">
+      <div class="grid grid-cols-1 h-full lg:col-start-2 lg:col-span-4 lg:row-start-1">
+        <div class="w-70 col-start-1 row-start-1 -rotate-2 ml-2"><img src="/hero1.png" alt="hero 1" /></div>
+        <div class="w-60 col-start-1 row-start-1 m-auto rotate-10 mr-3 mt-30 shadow-md"><img src="/hero2.png" alt="hero 2" /></div>
       </div>
 
-      <div class="mt-10">
+      <div class="mt-10 lg:col-start-7 lg:col-span-6 lg:row-start-1">
         <div class="mb-10">
-          <h1 class="font-notable text-6xl text-prim-500">INSTANT</h1>
-          <h1 class="font-notable text-6xl text-prim-500">DAY</h1>
+          <h1 class="font-notable text-6xl text-prim-500 lg:text-8xl">INSTANT</h1>
+          <h1 class="font-notable text-6xl text-prim-500 lg:text-8xl">DAY</h1>
         </div>
         <Button color="cream" size="medium"><a href="/share/">Ready to share your instant&#63;</a></Button>
       </div>
     </article>
-    <article class="p-5 pt-10 pb-10 bg-prim-500">
-      <h1 class="font-instrument-sans text-bg-500 text-[4.8em] text-center">OCT 18 2025</h1>
-      <p class="font-instrument-sans text-bg-500 text-base/7 text-left w-115 m-auto">
+    <article class="p-5 pt-10 pb-10 bg-prim-500 lg:col-start-1 lg:row-start-1 lg:h-50 lg:mt-auto lg:flex lg:flex-row">
+      <h1 class="font-instrument-sans text-bg-500 text-[4.8em] text-center lg:text-9xl">OCT 18 2025</h1>
+      <p class="font-instrument-sans text-bg-500 text-base/7 text-left w-115 m-auto lg:text-[1.3rem]/9 lg:w-148">
         is Instant day, a day all about celebrating instant photography. So get out your Polaroid, Instax or whatever instant photography camera you are using, and show us your instants.
       </p>
     </article>
   </section>
-  <section class="bg-bg-500 p-10 py-15">
-    <div class="flex flex-col gap-10 mb-15">
-      <h2 class="font-notable text-3xl text-prim-500">WHAT IS INSTANT DAY?</h2>
-      <p class="font-instrument-sans text-black text-base/7">
+  <section class="bg-bg-500 p-10 py-15 lg:grid lg:grid-cols-12 lg:py-20">
+    <div class="flex flex-col gap-10 mb-15 lg:col-start-2 lg:col-span-6">
+      <h2 class="font-notable text-3xl text-prim-500 lg:text-4xl">WHAT IS INSTANT DAY?</h2>
+      <p class="font-instrument-sans text-black text-base/7 lg:text-[18px]">
         Instant Day isn&#39;t really a photo competition, it&#39;s more a homage to good old analogue, instant photography - everybody who participates are winners. But we do have a nice prize for one lucky instant photographer!
       </p>
       <Button color="red" size="medium">Save the date</Button>
     </div>
-    <div id="kalender" class="w-70 h-70 bg-white border-2 border-prim-500 pb-2 m-auto">
+    <div id="kalender" class="w-70 h-70 bg-white border-2 border-prim-500 pb-2 m-auto rotate-2 lg:col-start-8 lg:col-span-4">
       <div class="bg-prim-500 p-5">
         <p class="font-instrument-sans text-bg-500 text-center text-4xl">OCTOBER</p>
       </div>
@@ -50,41 +50,51 @@ import Header from "../components/Header.astro";
       <p class="font-instrument-sans text-prim-500 text-center text-4xl mt-2">Instant Day</p>
     </div>
   </section>
-  <section class="bg-prim-500 p-10 flex flex-col gap-6">
-    <h2 class="font-notable text-3xl text-bg-500">WHY INSTANT PHOTOGRAPHY?</h2>
-    <p class="font-instrument-sans text-bg-500 text-base/7">Instant Photography is a testament to life: It all started back in the 1940&#39;s with a 3 year old kid.</p>
-    <img src="" alt="" />
-    <div>
-      <p class="font-instrument-sans text-bg-500 text-base/7">She wanted to see her fathers images right away. The father, Edwin Land, embarked on a mission: To invent instant photography.</p>
-      <img src="" alt="" />
+  <section class="bg-prim-500 p-10 flex flex-col gap-6 lg:gap-8 lg:grid lg:grid-cols-12">
+    <h2 class="font-notable text-3xl text-bg-500 lg:text-4xl lg:text-center lg:col-start-1 lg:col-span-12">WHY INSTANT PHOTOGRAPHY?</h2>
+    <p class="font-instrument-sans text-bg-500 text-base/7 lg:text-[18px] lg:text-center lg:col-start-1 lg:col-span-12">Instant Photography is a testament to life: It all started back in the 1940&#39;s with a 3 year old kid.</p>
+    <!-- <img src="" alt="" /> -->
+    <div class="lg:col-start-2 lg:col-span-5 lg:mt-15">
+      <p class="font-instrument-sans text-bg-500 text-base/7 lg:text-[18px]">She wanted to see her fathers images right away. The father, Edwin Land, embarked on a mission: To invent instant photography.</p>
+      <!-- <img src="" alt="" /> -->
     </div>
-    <div>
-      <img src="" alt="" />
-      <p class="font-instrument-sans text-bg-500 text-base/7">
-        Half a decade later, Edwin Land launched Instant photography and established the Polaroid brand. Instant photography turned into big business in the 70&#39;s and 80&#39;s, until the digital era almost killed the industry. However, the massive
-        amount of time wasted on the small screens have spurred a counterreaction: Analogue, off-line experiences have become popular again.
+    <div class="lg:col-start-2 lg:col-span-6">
+      <!-- <img src="" alt="" /> -->
+      <p class="mb-6 font-instrument-sans text-bg-500 text-base/7 lg:text-[18px]">
+        Half a decade later, Edwin Land launched Instant photography and established the Polaroid brand. Instant photography turned into big business in the 70&#39;s and 80&#39;s, until the digital era almost killed the industry.
       </p>
+      <p class="font-instrument-sans text-bg-500 text-base/7 lg:text-[18px]">However, the massive amount of time wasted on the small screens have spurred a counterreaction: Analogue, off-line experiences have become popular again.</p>
     </div>
-    <p class="font-instrument-sans text-bg-500 text-base/7">And instant photography is just that: An analogue, life-affirming and tactile photography experience. So let&#39;s celebrate life, and make memories.</p>
+    <p class="font-instrument-sans text-bg-500 text-base/7 lg:text-[18px] lg:col-start-2 lg:col-span-5">
+      And instant photography is just that: An analogue, life-affirming and tactile photography experience. So let&#39;s celebrate life, and make memories.
+    </p>
+    <div class="hidden lg:block lg:col-start-8 lg:col-span-4 lg:row-start-3 lg:row-span-3"><img src="/info_kamera.webp" alt="illustration af instant kamera" /></div>
   </section>
-  <section class="bg-bg-500 p-10 flex flex-col gap-10 font-instrument-sans text-black text-base/7">
-    <h2 class="font-notable text-3xl text-prim-500">HOW TO PARTICIPATE</h2>
-    <p>Got an instant photo ready for the public? Sweet! In order to take part in Instant Day:</p>
-
-    <img src="/step1.webp" alt="step 1" width="250" />
-    <div>
-      <p>Take a photo of your instant with your smartphone (or scan it for max. quality) The file should be between 2 - 10 MB, in jpg/jpeg or webp format.</p>
-
-      <p>Upload your photo and credentials on our Share Your Instant page.</p>
+  <section class="bg-bg-500 p-10 flex flex-col gap-10 font-instrument-sans text-black text-base/7 lg:grid lg:grid-cols-12">
+    <div class="lg:col-start-2 lg:col-span-6 lg:row-start-1">
+      <h2 class="font-notable text-3xl text-prim-500 lg:text-4xl">HOW TO PARTICIPATE</h2>
+      <p class="mt-6 lg:text-[18px]">Got an instant photo ready for the public? <span class="font-semibold">Sweet!</span> In order to take part in Instant Day:</p>
     </div>
-    <img src="/step2.webp" alt="step 1" width="250" class="ml-auto" />
 
-    <p>Agree to our terms and conditions <span class="italic">(which you can find here)</span>.</p>
+    <div class="w-65 lg:col-start-3 lg:col-span-4 lg:row-start-2 lg:w-80"><img src="/step1.webp" alt="step 1" /></div>
 
-    <p>The short version: Participants have to be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest.</p>
-    <img src="/step3.webp" alt="step 1" width="250" />
+    <div class="lg:col-start-6 lg:col-span-6 lg:row-start-2 lg:m-auto lg:text-[18px]">
+      <p>Take a photo of your instant with your smartphone (or scan it for max. quality)</p>
+      <p>The file should be between 2 - 10 MB, in jpg/jpeg or webp format.</p>
+    </div>
 
-    <p>You can make up to 5 submissions - go through step 1-3 for each submission</p>
-    <img src="/step4.webp" alt="step 1" width="250" class="ml-auto" />
+    <p class="lg:col-start-3 lg:col-span-5 lg:row-start-3 lg:m-auto lg:text-[18px]">Upload your photo and credentials on our Share Your Instant page.</p>
+
+    <div class="w-65 ml-auto lg:col-start-7 lg:col-span-4 lg:row-start-3 lg:w-80"><img src="/step2.webp" alt="step 1" /></div>
+
+    <div class="lg:w-150 lg:col-start-6 lg:col-span-6 lg:row-start-4 lg:m-auto lg:text-[18px]">
+      <p class="mb-6">Agree to our terms and conditions <span class="italic">(which you can find <a href="#" class="underline">here</a> )</span>.</p>
+
+      <p>The short version: Participants have to be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest.</p>
+    </div>
+    <div class="w-65 lg:col-start-3 lg:col-span-4 lg:row-start-4 lg:w-80"><img src="/step3.webp" alt="step 1" /></div>
+
+    <p class="lg:col-start-3 lg:col-span-5 lg:row-start-5 lg:m-auto lg:text-[18px]">You can make up to 5 submissions - go through step 1-3 for each submission</p>
+    <div class="w-65 ml-auto lg:col-start-7 lg:col-span-4 lg:row-start-5 lg:w-80"><img src="/step4.webp" alt="step 1" /></div>
   </section>
 </MainLayout>
