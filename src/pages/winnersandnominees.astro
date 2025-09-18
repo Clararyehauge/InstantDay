@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 
-<MainLayout title="Titel">
+<MainLayout title="Winners and nominiees">
   <section class="bg-bg-500 p-10 md:p-20 grid md:grid-cols-2 gap-10">
     <div class="md:order-2">
       <h1 class="font-notable text-[45px] md:text-[80px] text-prim-500 mb-3">WINNERS & NOMINIEES</h1>
@@ -23,7 +23,7 @@ import thumbsup from "../assets/images/thumbsup.png";
   </section>
   <section class="bg-prim-500 grid md:grid-cols-2 p-10 md:p-4 md:pl-10">
     <h1 class="font-notable text-bg2-500 text-[42px] md:text-[80px] md:pb-8">THANK YOU!</h1>
-    <p class="font-instrument-sans text-bg2-500 max-w-88 md:max-w-140 pt-8">Instant Day was quite a success with more than [ANTAL] contributions. So it was difficult to find a winner. After a couple of long but exciting days, the judges agreed on the winner and the [ANTAL NOMINEES] nominees.</p>
+    <p class="font-instrument-sans text-bg2-500 max-w-88 md:max-w-140 pt-8">Instant Day was quite a success with more than 125 contributions. So it was difficult to find a winner. After a couple of long but exciting days, the judges agreed on the winner and the 9 nominees.</p>
   </section>
   <section class="bg-bg-500 p-10 md:p-20">
     <h2 class="font-notable text-prim-500 text-[24px] md:text-[40px] md:flex items-center justify-center pb-10 md:pb-20">The winner of Instant day 2025</h2>
@@ -38,9 +38,64 @@ import thumbsup from "../assets/images/thumbsup.png";
     </div>
   </section>
   <section class="bg-bg-500 p-10 md:p-20">
-    <h2 class="font-notable text-prim-500 text-[20px] md:text-[32px] md:flex items-center justify-center">THE NOMINIEES</h2>
-    <div><img src="" alt="" /><img src="" alt="" /><img src="" alt="" /><img src="" alt="" /></div>
-    <div><img src="" alt="" /><img src="" alt="" /><img src="" alt="" /><img src="" alt="" /></div>
-    <div><img src="" alt="" /><img src="" alt="" /><img src="" alt="" /><img src="" alt="" /></div>
+    <h2 class="font-notable text-prim-500 text-[20px] md:text-[32px] flex items-center justify-center">THE NOMINIEES</h2>
+    <div class="md:flex justify-center px-4">
+      <div class="grid md:grid-cols-3 gap-10 pt-10">
+        <div class="pb-12">
+          <img src="/nomineret1.webp" alt="nomineret1" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">Amager Strand</p>
+          <p class="font-instrument-sans pb-5">Stefan Grage</p>
+          <p class="font-instrument-sans md:max-w-78">From this angle, copenhagen looks like a big city. Taken with a Polaroid Now+ gen 2, with a yellow tint filter.</p>
+        </div>
+        <div class="pb-12">
+          <img src="/nomineret2.webp" alt="nomineret2" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">Amager Forbrænding</p>
+          <p class="font-instrument-sans pb-5">Stefan Grage</p>
+          <p class="font-instrument-sans md:max-w-78">I’d give my right arm for a cigarette. Taken with a Lomomatic Square.</p>
+        </div>
+        <div class="pb-12">
+          <img src="/nomineret3.webp" alt="nomineret3" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">New meets old</p>
+          <p class="font-instrument-sans pb-5">Stefan Grage</p>
+          <p class="font-instrument-sans md:max-w-78">New city development district, Ørestad. I used a Polaroid Now+ gen 2 in tripod mode with an i-Type black and white film in order to make a long exposure.</p>
+        </div>
+        <div class="pb-12">
+          <img src="/nomineret4.webp" alt="nomineret4" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">Karlstrup & coffee</p>
+          <p class="font-instrument-sans pb-5">Stefan Grage</p>
+          <p class="font-instrument-sans md:max-w-78">The scenic beauty of a former lime pit with a twist of coffee: The polaroid was soaked in coffee for a couple of weeks. That gave it a nice tan. Polaroid flip.</p>
+        </div>
+        <div class="pb-12">
+          <img src="/nomineret5.webp" alt="nomineret5" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">Hanklit Bakketop</p>
+          <p class="font-instrument-sans pb-5">Stefan Grage</p>
+          <p class="font-instrument-sans md:max-w-78">A little snap from Hanklit Bakketop, a common place in Jylland, Denmark. Taken with a Lomomatic Square.</p>
+        </div>
+        <div class="pb-12">
+          <img src="/nomineret6.webp" alt="nomineret6" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">Vejlands allé</p>
+          <p class="font-instrument-sans pb-5">Stefan Grage</p>
+          <p class="font-instrument-sans md:max-w-78">Big road, lots of traffic. Too wide for a single shot. So I composed this image on an old Minolta panoramic camera, and printed in on a Polaroid Lab with expired film</p>
+        </div>
+        <div class="pb-12">
+          <img src="/nomineret7.webp" alt="nomineret7" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">Kunst</p>
+          <p class="font-instrument-sans pb-5">Stefan Grage</p>
+          <p class="font-instrument-sans md:max-w-78">Art made by Erik Heide. Erik Heide was a Danish sculptor. I have always looked up to him and his art. I used a Polaroid Now+ gen 2.</p>
+        </div>
+        <div class="pb-12">
+          <img src="/nomineret8.webp" alt="nomineret8" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">Kolonihave</p>
+          <p class="font-instrument-sans pb-5">Stefan Grage</p>
+          <p class="font-instrument-sans md:max-w-78">From the forrest near by my summer house in on Sjælland, Denmark. Expired instax mini film.</p>
+        </div>
+        <div class="pb-12">
+          <img src="/nomineret9.webp" alt="nomineret9" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">2 x Ørestad</p>
+          <p class="font-instrument-sans pb-5">Stefan Grage</p>
+          <p class="font-instrument-sans md:max-w-78">A double exposure from my neighbourhood, Ørestad. Taken with a Lomomatic Square.</p>
+        </div>
+      </div>
+    </div>
   </section>
 </MainLayout>
