@@ -38,64 +38,92 @@ import thumbsup from "../assets/images/thumbsup.png";
     </div>
   </section>
   <section class="bg-bg-500 p-10 md:p-20">
-    <h2 class="font-notable text-prim-500 text-[20px] md:text-[32px] flex items-center justify-center">THE NOMINIEES</h2>
-    <div class="md:flex justify-center px-4">
-      <div class="grid md:grid-cols-3 gap-10 pt-10">
-        <div class="pb-12">
-          <img src="/nomineret1.webp" alt="nomineret1" />
-          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">Amager Strand</p>
-          <p class="font-instrument-sans pb-5">Stefan Grage</p>
-          <p class="font-instrument-sans md:max-w-78">From this angle, copenhagen looks like a big city. Taken with a Polaroid Now+ gen 2, with a yellow tint filter.</p>
+    <h2 class="font-notable text-prim-500 text-[20px] md:text-[32px] flex items-center justify-center">THE NOMINEES</h2>
+    <div class="relative mt-10">
+      <!-- Venstre pil -->
+      <button onclick="scrollGallery(-1)" class="absolute left-4 top-45 z-10 bg-prim-500 text-bg2-500 hover:drop-shadow-[0_5px_10px_rgba(0,0,0,0.5)] p-2 rounded-full shadow-md" aria-label="Scroll left"> &#8592; </button>
+
+      <!-- Scrollbart bånd -->
+      <div id="nomineeGallery" class="flex overflow-x-auto gap-6 scroll-smooth px-3">
+        <div class="min-w-[280px] max-w-[280px] flex-shrink-0 pb-12">
+          <img src="/nomineret1.webp" alt="nomineret1" class="w-full h-auto" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] pt-6 italic font-bold">Amager Strand</p>
+          <p class="font-instrument-sans pb-2">Stefan Grage</p>
+          <p class="font-instrument-sans text-sm">From this angle, Copenhagen looks like a big city. Taken with a Polaroid Now+ gen 2, with a yellow tint filter.</p>
         </div>
-        <div class="pb-12">
-          <img src="/nomineret2.webp" alt="nomineret2" />
-          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">Amager Forbrænding</p>
-          <p class="font-instrument-sans pb-5">Stefan Grage</p>
-          <p class="font-instrument-sans md:max-w-78">I’d give my right arm for a cigarette. Taken with a Lomomatic Square.</p>
+
+        <div class="min-w-[280px] max-w-[280px] flex-shrink-0 pb-12">
+          <img src="/nomineret2.webp" alt="nomineret2" class="w-full h-auto" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] pt-6 italic font-bold">Amager Forbrænding</p>
+          <p class="font-instrument-sans pb-2">Stefan Grage</p>
+          <p class="font-instrument-sans text-sm">I’d give my right arm for a cigarette. Taken with a Lomomatic Square.</p>
         </div>
-        <div class="pb-12">
-          <img src="/nomineret3.webp" alt="nomineret3" />
-          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">New meets old</p>
-          <p class="font-instrument-sans pb-5">Stefan Grage</p>
-          <p class="font-instrument-sans md:max-w-78">New city development district, Ørestad. I used a Polaroid Now+ gen 2 in tripod mode with an i-Type black and white film in order to make a long exposure.</p>
+
+        <div class="min-w-[280px] max-w-[280px] flex-shrink-0 pb-12">
+          <img src="/nomineret3.webp" alt="nomineret3" class="w-full h-auto" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] pt-6 italic font-bold">New meets old</p>
+          <p class="font-instrument-sans pb-2">Stefan Grage</p>
+          <p class="font-instrument-sans text-sm">I used a Polaroid Now+ gen 2 in tripod mode with an i-Type black and white film in order to make a long exposure.</p>
         </div>
-        <div class="pb-12">
-          <img src="/nomineret4.webp" alt="nomineret4" />
-          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">Karlstrup & coffee</p>
-          <p class="font-instrument-sans pb-5">Stefan Grage</p>
-          <p class="font-instrument-sans md:max-w-78">The scenic beauty of a former lime pit with a twist of coffee: The polaroid was soaked in coffee for a couple of weeks. That gave it a nice tan. Polaroid flip.</p>
+
+        <div class="min-w-[280px] max-w-[280px] flex-shrink-0 pb-12">
+          <img src="/nomineret4.webp" alt="nomineret4" class="w-full h-auto" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] pt-6 italic font-bold">Karlstrup & coffee</p>
+          <p class="font-instrument-sans pb-2">Stefan Grage</p>
+          <p class="font-instrument-sans text-sm">The polaroid was soaked in coffee for a couple of weeks. That gave it a nice tan. Polaroid flip.</p>
         </div>
-        <div class="pb-12">
-          <img src="/nomineret5.webp" alt="nomineret5" />
-          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">Hanklit Bakketop</p>
-          <p class="font-instrument-sans pb-5">Stefan Grage</p>
-          <p class="font-instrument-sans md:max-w-78">A little snap from Hanklit Bakketop, a common place in Jylland, Denmark. Taken with a Lomomatic Square.</p>
+
+        <div class="min-w-[280px] max-w-[280px] flex-shrink-0 pb-12">
+          <img src="/nomineret5.webp" alt="nomineret5" class="w-full h-auto" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] pt-6 italic font-bold">Hanklit Bakketop</p>
+          <p class="font-instrument-sans pb-2">Stefan Grage</p>
+          <p class="font-instrument-sans text-sm">A little snap from Hanklit Bakketop, a common place in Jylland. Taken with a Lomomatic Square.</p>
         </div>
-        <div class="pb-12">
-          <img src="/nomineret6.webp" alt="nomineret6" />
-          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">Vejlands allé</p>
-          <p class="font-instrument-sans pb-5">Stefan Grage</p>
-          <p class="font-instrument-sans md:max-w-78">Big road, lots of traffic. Too wide for a single shot. So I composed this image on an old Minolta panoramic camera, and printed in on a Polaroid Lab with expired film</p>
+
+        <div class="min-w-[280px] max-w-[280px] flex-shrink-0 pb-12">
+          <img src="/nomineret6.webp" alt="nomineret6" class="w-full h-auto" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] pt-6 italic font-bold">Vejlands allé</p>
+          <p class="font-instrument-sans pb-2">Stefan Grage</p>
+          <p class="font-instrument-sans text-sm">Too wide for a single shot. Composed on a Minolta panoramic camera, printed on a Polaroid Lab with expired film.</p>
         </div>
-        <div class="pb-12">
-          <img src="/nomineret7.webp" alt="nomineret7" />
-          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">Kunst</p>
-          <p class="font-instrument-sans pb-5">Stefan Grage</p>
-          <p class="font-instrument-sans md:max-w-78">Art made by Erik Heide. Erik Heide was a Danish sculptor. I have always looked up to him and his art. I used a Polaroid Now+ gen 2.</p>
+
+        <div class="min-w-[280px] max-w-[280px] flex-shrink-0 pb-12">
+          <img src="/nomineret7.webp" alt="nomineret7" class="w-full h-auto" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] pt-6 italic font-bold">Kunst</p>
+          <p class="font-instrument-sans pb-2">Stefan Grage</p>
+          <p class="font-instrument-sans text-sm">Art made by Erik Heide. I’ve always looked up to him. Shot on Polaroid Now+ gen 2.</p>
         </div>
-        <div class="pb-12">
-          <img src="/nomineret8.webp" alt="nomineret8" />
-          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">Kolonihave</p>
-          <p class="font-instrument-sans pb-5">Stefan Grage</p>
-          <p class="font-instrument-sans md:max-w-78">From the forrest near by my summer house in on Sjælland, Denmark. Expired instax mini film.</p>
+
+        <div class="min-w-[280px] max-w-[280px] flex-shrink-0 pb-12">
+          <img src="/nomineret8.webp" alt="nomineret8" class="w-full h-auto" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] pt-6 italic font-bold">Kolonihave</p>
+          <p class="font-instrument-sans pb-2">Stefan Grage</p>
+          <p class="font-instrument-sans text-sm">From the forest near my summer house on Sjælland. Expired Instax Mini film.</p>
         </div>
-        <div class="pb-12">
-          <img src="/nomineret9.webp" alt="nomineret9" />
-          <p class="font-instrument-sans text-prim-500 text-[18px] md:text-[22px] pt-10 italic font-bold">2 x Ørestad</p>
-          <p class="font-instrument-sans pb-5">Stefan Grage</p>
-          <p class="font-instrument-sans md:max-w-78">A double exposure from my neighbourhood, Ørestad. Taken with a Lomomatic Square.</p>
+
+        <div class="min-w-[280px] max-w-[280px] flex-shrink-0 pb-12">
+          <img src="/nomineret9.webp" alt="nomineret9" class="w-full h-auto" />
+          <p class="font-instrument-sans text-prim-500 text-[18px] pt-6 italic font-bold">2 x Ørestad</p>
+          <p class="font-instrument-sans pb-2">Stefan Grage</p>
+          <p class="font-instrument-sans text-sm">A double exposure from my neighbourhood, Ørestad. Taken with a Lomomatic Square.</p>
         </div>
       </div>
+
+      <!-- Højre pil -->
+      <button onclick="scrollGallery(1)" class="absolute right-4 top-45 z-10 bg-prim-500 text-bg2-500 hover:drop-shadow-[0_5px_10px_rgba(0,0,0,0.5)] p-2 rounded-full shadow-md" aria-label="Scroll right"> &#8594; </button>
     </div>
   </section>
 </MainLayout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.scrollGallery = function (direction) {
+      const container = document.getElementById("nomineeGallery");
+      const scrollAmount = 320;
+      container.scrollBy({
+        left: direction * scrollAmount,
+        behavior: "smooth",
+      });
+    };
+  });
+</script>
