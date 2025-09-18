@@ -10,7 +10,7 @@ import Header from "../components/Header.astro";
 <MainLayout title="Instant Day">
   <section class="bg-bg-500 lg:grid lg:grid-cols-1 lg:h-170">
     <article class="p-10 mb-6 lg:col-span-12 lg:col-start-1 lg:row-start-1 lg:grid lg:grid-cols-12 lg:pt-5">
-      <div class="grid grid-cols-1 h-full lg:col-start-2 lg:col-span-4 lg:row-start-1 animate-fade-down">
+      <div class="max-w-100 grid grid-cols-1 h-full lg:col-start-2 lg:col-span-4 lg:row-start-1 animate-fade-down">
         <div class="w-70 col-start-1 row-start-1 -rotate-2 ml-2"><img src="/hero1.png" alt="hero 1" /></div>
         <div class="w-60 col-start-1 row-start-1 m-auto rotate-15 mr-3 mt-30 shadow-md"><img src="/hero2.png" alt="hero 2" /></div>
       </div>
@@ -24,14 +24,18 @@ import Header from "../components/Header.astro";
       </div>
     </article>
     <article class="p-5 pt-10 pb-10 bg-prim-500 lg:col-start-1 lg:row-start-1 lg:h-50 lg:mt-auto lg:flex lg:flex-row">
-      <h1 class="font-instrument-sans text-bg2-500 text-[4.8em] text-center lg:text-9xl">OCT 18 2025</h1>
-      <p class="font-instrument-sans text-bg2-500 text-base/7 text-left w-115 m-auto lg:text-[1.2rem]/9 lg:w-140">is Instant day, a day all about celebrating instant photography. So get out your Polaroid, Instax or whatever instant photography camera you are using, and show us your instants.</p>
+      <h1 class="font-instrument-sans text-bg2-500 text-[4.8em] text-center lg:text-8xl m-auto">OCT 18 2025</h1>
+      <p class="font-instrument-sans text-bg2-500 text-base/7 text-left w-115 m-auto lg:text-[1.2rem]/9 lg:w-140">
+        is Instant day, a day all about celebrating instant photography. So get out your Polaroid, Instax or whatever instant photography camera you are using, and show us your instants.
+      </p>
     </article>
   </section>
   <section class="bg-bg-500 p-10 py-15 lg:grid lg:grid-cols-12 lg:py-20">
     <div class="flex flex-col gap-10 mb-15 lg:col-start-2 lg:col-span-6">
       <h2 class="font-notable text-3xl text-prim-500 lg:text-4xl">WHAT IS INSTANT DAY?</h2>
-      <p class="font-instrument-sans text-black text-base/7 lg:text-[18px]">Instant Day isn&#39;t really a photo competition, it&#39;s more a homage to good old analogue, instant photography - everybody who participates are winners. But we do have a nice prize for one lucky instant photographer!</p>
+      <p class="font-instrument-sans text-black text-base/7 lg:text-[18px]">
+        Instant Day isn&#39;t really a photo competition, it&#39;s more a homage to good old analogue, instant photography - everybody who participates are winners. But we do have a nice prize for one lucky instant photographer!
+      </p>
       <Button color="red" size="medium">Save the date</Button>
     </div>
     <div id="kalender" class="w-70 h-70 bg-white border-2 border-prim-500 pb-2 m-auto lg:col-start-8 lg:col-span-4">
@@ -40,7 +44,7 @@ import Header from "../components/Header.astro";
       </div>
       <div class="grid grid-cols-2 p-5">
         <p class="col-start-1 font-instrument-sans text-8xl text-prim-500 text-center">18</p>
-        <div class="col-start-2 bg-gray-400 w-25 h-23 m-auto"></div>
+        <div class="col-start-2 w-25 h-23 m-auto overflow-hidden"><img class="object-cover" src="/nomineret1.webp" alt="" /></div>
       </div>
       <div class="w-50 h-[2px] bg-prim-500 m-auto"></div>
       <p class="font-instrument-sans text-prim-500 text-center text-4xl mt-2">Instant Day</p>
@@ -56,10 +60,14 @@ import Header from "../components/Header.astro";
     </div>
     <div class="lg:col-start-2 lg:col-span-6">
       <!-- <img src="" alt="" /> -->
-      <p class="mb-6 font-instrument-sans text-bg2-500 text-base/7 lg:text-[18px]">Half a decade later, Edwin Land launched Instant photography and established the Polaroid brand. Instant photography turned into big business in the 70&#39;s and 80&#39;s, until the digital era almost killed the industry.</p>
+      <p class="mb-6 font-instrument-sans text-bg2-500 text-base/7 lg:text-[18px]">
+        Half a decade later, Edwin Land launched Instant photography and established the Polaroid brand. Instant photography turned into big business in the 70&#39;s and 80&#39;s, until the digital era almost killed the industry.
+      </p>
       <p class="font-instrument-sans text-bg2-500 text-base/7 lg:text-[18px]">However, the massive amount of time wasted on the small screens have spurred a counterreaction: Analogue, off-line experiences have become popular again.</p>
     </div>
-    <p class="font-instrument-sans text-bg2-500 text-base/7 lg:text-[18px] lg:col-start-2 lg:col-span-5">And instant photography is just that: An analogue, life-affirming and tactile photography experience. So let&#39;s celebrate life, and make memories.</p>
+    <p class="font-instrument-sans text-bg2-500 text-base/7 lg:text-[18px] lg:col-start-2 lg:col-span-5">
+      And instant photography is just that: An analogue, life-affirming and tactile photography experience. So let&#39;s celebrate life, and make memories.
+    </p>
     <div class="hidden lg:block lg:col-start-8 lg:col-span-4 lg:row-start-3 lg:row-span-3"><img src="/info_kamera.webp" alt="illustration af instant kamera" /></div>
   </section>
   <section class="bg-bg-500 p-10 flex flex-col gap-10 font-instrument-sans text-black text-base/7 lg:grid lg:grid-cols-12 lg:py-20">
@@ -83,7 +91,17 @@ import Header from "../components/Header.astro";
       <p class="mb-6">Agree to our terms and conditions <span class="italic">(which you can find <button @click="open = !open" class="underline cursor-pointer hover:font-semibold hover:text-prim-500">here</button> )</span>.</p>
 
       <!-- Tekst container -->
-      <div x-show="open" @click.outside="open = false" x-transition:enter="transition transform origin-top duration-300 ease-out" x-transition:enter-start="scale-y-0 opacity-0" x-transition:enter-end="scale-y-100 opacity-100" x-transition:leave="transition transform origin-top duration-200 ease-in" x-transition:leave-start="scale-y-100 opacity-100" x-transition:leave-end="scale-y-0 opacity-0" class="mt-4 mb-6 p-10 bg-prim-500 text-bg-500 flex flex-col gap-10">
+      <div
+        x-show="open"
+        @click.outside="open = false"
+        x-transition:enter="transition transform origin-top duration-300 ease-out"
+        x-transition:enter-start="scale-y-0 opacity-0"
+        x-transition:enter-end="scale-y-100 opacity-100"
+        x-transition:leave="transition transform origin-top duration-200 ease-in"
+        x-transition:leave-start="scale-y-100 opacity-100"
+        x-transition:leave-end="scale-y-0 opacity-0"
+        class="mt-4 mb-6 p-10 bg-prim-500 text-bg-500 flex flex-col gap-10"
+      >
         <div>
           <h2 class="font-notable text-2xl mb-2">Terms & conditions</h2>
           <p>By participating in the contest, you accept the following terms and conditions</p>
@@ -94,15 +112,25 @@ import Header from "../components/Header.astro";
         </div>
         <div>
           <h2 class="font-notable text-2xl mb-2">Instant Photo</h2>
-          <p>Every submission has to be an analogue instant photo - not a digital montage made in a photo editing suite. The instant can be made in various ways, with analogue instant cameras, digital instant cameras like ie. the Fujifilm EVO or scan-and-print tools like ie. the Polaroid Lab. The instant photo can be manipulated with analogue processes - the organizers encourage instant photography experiments. The submission can depict the instant photo in many ways: As a flat scan without or without the instant photo frame, as a photo showing the instants in a frame, on the wall etc. The instant doesn’t need to be just one photo: It can be a panorama or collage of multiple instants that make up one submission.</p>
+          <p>
+            Every submission has to be an analogue instant photo - not a digital montage made in a photo editing suite. The instant can be made in various ways, with analogue instant cameras, digital instant cameras like ie. the Fujifilm EVO or
+            scan-and-print tools like ie. the Polaroid Lab. The instant photo can be manipulated with analogue processes - the organizers encourage instant photography experiments. The submission can depict the instant photo in many ways: As a flat
+            scan without or without the instant photo frame, as a photo showing the instants in a frame, on the wall etc. The instant doesn’t need to be just one photo: It can be a panorama or collage of multiple instants that make up one submission.
+          </p>
         </div>
         <div>
           <h2 class="font-notable text-2xl mb-2">Consent</h2>
-          <p>It is prohibited to upload photographs of people who have not given consent to the publication of the image. Images of people in private or embarrassing situations, regardless of whether they are photographed in a public place, are not allowed.</p>
+          <p>
+            It is prohibited to upload photographs of people who have not given consent to the publication of the image. Images of people in private or embarrassing situations, regardless of whether they are photographed in a public place, are not
+            allowed.
+          </p>
         </div>
         <div>
           <h2 class="font-notable text-2xl mb-2">Legal stuff</h2>
-          <p>The organizers reserve the right to disqualify any participant who violates these conditions. The organizers assume no responsibility for any loss, damage or injury that may arise as a result of participation in the competition or the use of prizes. Participants release the organizers from any claim, lawsuit or liability related to their participation in the competition.</p>
+          <p>
+            The organizers reserve the right to disqualify any participant who violates these conditions. The organizers assume no responsibility for any loss, damage or injury that may arise as a result of participation in the competition or the use
+            of prizes. Participants release the organizers from any claim, lawsuit or liability related to their participation in the competition.
+          </p>
         </div>
         <div>
           <h2 class="font-notable text-2xl mb-2">Number of submissions</h2>
@@ -110,15 +138,25 @@ import Header from "../components/Header.astro";
         </div>
         <div>
           <h2 class="font-notable text-2xl mb-2">Usage rights</h2>
-          <p>By submitting one or more images and thereby participating in the competition, you agree that the image may be used for the promotion of the photo competition and possibly in physical exhibition spaces afterwards. The organizers will credit the participants wherever practical and reasonably possible.</p>
+          <p>
+            By submitting one or more images and thereby participating in the competition, you agree that the image may be used for the promotion of the photo competition and possibly in physical exhibition spaces afterwards. The organizers will
+            credit the participants wherever practical and reasonably possible.
+          </p>
         </div>
         <div>
           <h2 class="font-notable text-2xl mb-2">Copyright</h2>
-          <p>You must be the author of the submitted instants and have the rights to publish them. The instants must be free of third party rights. Participants retain all copyright in their submitted instants. By submitting instants to the competition, participants grant the organizers a non-exclusive license to use, reproduce and publish the submitted images in connection with the promotion of the competition, including on social media platforms, websites and printed materials. The organizers will credit the participants wherever practical and reasonable.</p>
+          <p>
+            You must be the author of the submitted instants and have the rights to publish them. The instants must be free of third party rights. Participants retain all copyright in their submitted instants. By submitting instants to the
+            competition, participants grant the organizers a non-exclusive license to use, reproduce and publish the submitted images in connection with the promotion of the competition, including on social media platforms, websites and printed
+            materials. The organizers will credit the participants wherever practical and reasonable.
+          </p>
         </div>
         <div>
           <h2 class="font-notable text-2xl mb-2">Announcement of Winners</h2>
-          <p>The winners of the competition will be announced on the official website and/or social media platforms of the organizers. By participating in the competition, the winners consent to the publication of their names and submitted photos for promotional purposes.</p>
+          <p>
+            The winners of the competition will be announced on the official website and/or social media platforms of the organizers. By participating in the competition, the winners consent to the publication of their names and submitted photos for
+            promotional purposes.
+          </p>
         </div>
       </div>
       <!-- -------- -->
