@@ -34,7 +34,7 @@ import Note from "../components/Note.astro";
   </section>
 
 <section class="bg-bg2-500 py-10 px-6">
-  <div class="max-w-6xl mx-auto">
+  <div class="max-w-6xl mx-20">
     <form class="grid grid-cols-1 lg:grid-cols-2 gap-10" action="#" method="post">
 
       <div class="w-full lg:max-w-lg mx-auto">
@@ -47,7 +47,7 @@ import Note from "../components/Note.astro";
               name="name"
               type="text" 
               placeholder="example..." 
-              class="w-full p-3 bg-bg2-500 shadow-inner placeholder-gray-400 focus:outline-none"
+              class="w-full p-3 bg-bg2-500 shadow-inner placeholder-gray-400 border-0 focus:outline-none"
             />
           </div>
 
@@ -57,7 +57,7 @@ import Note from "../components/Note.astro";
               name="email"
               type="email" 
               placeholder="example..." 
-              class="w-full p-3 bg-bg2-500 shadow-inner placeholder-gray-400 focus:outline-none"
+              class="w-full p-3 bg-bg2-500 shadow-inner placeholder-gray-400 border-0 focus:outline-none"
             />
           </div>
 
@@ -72,12 +72,12 @@ import Note from "../components/Note.astro";
       </div>
 
       <!-- HØJRE KOLONNE -->
-      <div class="max-w-md mx-auto">
+      <div class="max-w-md lg:ml-auto">
         <div class="relative">
           <img src="/public/klemme_rød.svg" alt="clip" class="absolute -top-8 left-1/2 -translate-x-1/2 w-12 h-12" />
 
           <div class="bg-white shadow-lg p-6">
-            <div class="bg-gray-200 w-full h-64 flex items-center justify-center text-gray-500 font-instrument-sans">
+            <div class="bg-gray-200 w-full h-64 flex items-center justify-center text-gray-400 font-instrument-sans">
               Upload your image
             </div>
 
@@ -87,7 +87,7 @@ import Note from "../components/Note.astro";
                 name="title"
                 type="text" 
                 placeholder="example..." 
-                class="w-full p-3 bg-gray-100 shadow-inner rounded-sm placeholder-gray-400 focus:outline-none"
+                class="w-full p-3 bg-gray-100 shadow-inner border-0 placeholder-gray-400 focus:outline-none"
               />
             </div>
 
@@ -97,7 +97,7 @@ import Note from "../components/Note.astro";
                 name="description"
                 placeholder="example..." 
                 rows="3"
-                class="w-full p-3 bg-gray-100 shadow-inner rounded-sm placeholder-gray-400 focus:outline-none"
+                class="w-full p-3 bg-gray-100 shadow-inner border-0 placeholder-gray-400 focus:outline-none"
               ></textarea>
             </div>
           </div>
