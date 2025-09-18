@@ -7,20 +7,20 @@ import thumbsup from "../assets/images/thumbsup.png";
 import Header from "../components/Header.astro";
 ---
 
-<MainLayout title="Titel">
+<MainLayout title="Instant Day">
   <section class="bg-bg-500 lg:grid lg:grid-cols-1 lg:h-170">
     <article class="p-10 mb-6 lg:col-span-12 lg:col-start-1 lg:row-start-1 lg:grid lg:grid-cols-12 lg:pt-5">
-      <div class="grid grid-cols-1 h-full lg:col-start-2 lg:col-span-4 lg:row-start-1">
+      <div class="grid grid-cols-1 h-full lg:col-start-2 lg:col-span-4 lg:row-start-1 animate-fade-down">
         <div class="w-70 col-start-1 row-start-1 -rotate-2 ml-2"><img src="/hero1.png" alt="hero 1" /></div>
         <div class="w-60 col-start-1 row-start-1 m-auto rotate-10 mr-3 mt-30 shadow-md"><img src="/hero2.png" alt="hero 2" /></div>
       </div>
 
       <div class="mt-10 lg:col-start-7 lg:col-span-6 lg:row-start-1">
-        <div class="mb-10">
+        <div class="mb-10 animate-fade animate-delay-200">
           <h1 class="font-notable text-6xl text-prim-500 lg:text-8xl">INSTANT</h1>
           <h1 class="font-notable text-6xl text-prim-500 lg:text-8xl">DAY</h1>
         </div>
-        <Button color="cream" size="medium"><a href="/share/">Ready to share your instant&#63;</a></Button>
+        <div class="animate-fade-up animate-delay-400"><Button color="cream" size="medium"><a href="/share/">Ready to share your instant&#63;</a></Button></div>
       </div>
     </article>
     <article class="p-5 pt-10 pb-10 bg-prim-500 lg:col-start-1 lg:row-start-1 lg:h-50 lg:mt-auto lg:flex lg:flex-row">
@@ -50,7 +50,7 @@ import Header from "../components/Header.astro";
       <p class="font-instrument-sans text-prim-500 text-center text-4xl mt-2">Instant Day</p>
     </div>
   </section>
-  <section class="bg-prim-500 p-10 flex flex-col gap-6 lg:gap-8 lg:grid lg:grid-cols-12">
+  <section class="bg-prim-500 p-10 flex flex-col gap-8 lg:gap-8 lg:grid lg:grid-cols-12 lg:py-22">
     <h2 class="font-notable text-3xl text-bg-500 lg:text-4xl lg:text-center lg:col-start-1 lg:col-span-12">WHY INSTANT PHOTOGRAPHY?</h2>
     <p class="font-instrument-sans text-bg-500 text-base/7 lg:text-[18px] lg:text-center lg:col-start-1 lg:col-span-12">Instant Photography is a testament to life: It all started back in the 1940&#39;s with a 3 year old kid.</p>
     <!-- <img src="" alt="" /> -->
@@ -70,7 +70,7 @@ import Header from "../components/Header.astro";
     </p>
     <div class="hidden lg:block lg:col-start-8 lg:col-span-4 lg:row-start-3 lg:row-span-3"><img src="/info_kamera.webp" alt="illustration af instant kamera" /></div>
   </section>
-  <section class="bg-bg-500 p-10 flex flex-col gap-10 font-instrument-sans text-black text-base/7 lg:grid lg:grid-cols-12">
+  <section class="bg-bg-500 p-10 flex flex-col gap-10 font-instrument-sans text-black text-base/7 lg:grid lg:grid-cols-12 lg:py-20">
     <div class="lg:col-start-2 lg:col-span-6 lg:row-start-1">
       <h2 class="font-notable text-3xl text-prim-500 lg:text-4xl">HOW TO PARTICIPATE</h2>
       <p class="mt-6 lg:text-[18px]">Got an instant photo ready for the public? <span class="font-semibold">Sweet!</span> In order to take part in Instant Day:</p>
@@ -83,13 +83,83 @@ import Header from "../components/Header.astro";
       <p>The file should be between 2 - 10 MB, in jpg/jpeg or webp format.</p>
     </div>
 
-    <p class="lg:col-start-3 lg:col-span-5 lg:row-start-3 lg:m-auto lg:text-[18px]">Upload your photo and credentials on our Share Your Instant page.</p>
+    <p class="lg:col-start-3 lg:col-span-5 lg:row-start-3 lg:m-auto lg:text-[18px]">Upload your photo and credentials on our <a href="/share/" class="font-semibold hover:underline hover:text-prim-500">Share Your Instant</a> page.</p>
 
     <div class="w-65 ml-auto lg:col-start-7 lg:col-span-4 lg:row-start-3 lg:w-80"><img src="/step2.webp" alt="step 1" /></div>
 
-    <div class="lg:w-150 lg:col-start-6 lg:col-span-6 lg:row-start-4 lg:m-auto lg:text-[18px]">
-      <p class="mb-6">Agree to our terms and conditions <span class="italic">(which you can find <a href="#" class="underline">here</a> )</span>.</p>
+    <div x-data="{ open: false }" class="lg:w-150 lg:col-start-6 lg:col-span-6 lg:row-start-4 lg:m-auto lg:text-[18px]">
+      <p class="mb-6">Agree to our terms and conditions <span class="italic">(which you can find <button @click="open = !open" class="underline cursor-pointer hover:font-semibold hover:text-prim-500">here</button> )</span>.</p>
 
+      <!-- Tekst container -->
+      <div
+        x-show="open"
+        @click.outside="open = false"
+        x-transition:enter="transition transform origin-top duration-300 ease-out"
+        x-transition:enter-start="scale-y-0 opacity-0"
+        x-transition:enter-end="scale-y-100 opacity-100"
+        x-transition:leave="transition transform origin-top duration-200 ease-in"
+        x-transition:leave-start="scale-y-100 opacity-100"
+        x-transition:leave-end="scale-y-0 opacity-0"
+        class="mt-4 mb-6 p-10 bg-prim-500 text-bg-500 flex flex-col gap-10"
+      >
+        <div>
+          <h2 class="font-notable text-2xl mb-2">Terms & conditions</h2>
+          <p>By participating in the contest, you accept the following terms and conditions</p>
+        </div>
+        <div>
+          <h2 class="font-notable text-2xl mb-2">Participation</h2>
+          <p>The competition is open to all photographers, both amateurs and professionals, who are over 18 years old.</p>
+        </div>
+        <div>
+          <h2 class="font-notable text-2xl mb-2">Instant Photo</h2>
+          <p>
+            Every submission has to be an analogue instant photo - not a digital montage made in a photo editing suite. The instant can be made in various ways, with analogue instant cameras, digital instant cameras like ie. the Fujifilm EVO or
+            scan-and-print tools like ie. the Polaroid Lab. The instant photo can be manipulated with analogue processes - the organizers encourage instant photography experiments. The submission can depict the instant photo in many ways: As a flat
+            scan without or without the instant photo frame, as a photo showing the instants in a frame, on the wall etc. The instant doesn’t need to be just one photo: It can be a panorama or collage of multiple instants that make up one submission.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-notable text-2xl mb-2">Consent</h2>
+          <p>
+            It is prohibited to upload photographs of people who have not given consent to the publication of the image. Images of people in private or embarrassing situations, regardless of whether they are photographed in a public place, are not
+            allowed.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-notable text-2xl mb-2">Legal stuff</h2>
+          <p>
+            The organizers reserve the right to disqualify any participant who violates these conditions. The organizers assume no responsibility for any loss, damage or injury that may arise as a result of participation in the competition or the use
+            of prizes. Participants release the organizers from any claim, lawsuit or liability related to their participation in the competition.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-notable text-2xl mb-2">Number of submissions</h2>
+          <p>You can enter the competition with a total of five submissions.</p>
+        </div>
+        <div>
+          <h2 class="font-notable text-2xl mb-2">Usage rights</h2>
+          <p>
+            By submitting one or more images and thereby participating in the competition, you agree that the image may be used for the promotion of the photo competition and possibly in physical exhibition spaces afterwards. The organizers will
+            credit the participants wherever practical and reasonably possible.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-notable text-2xl mb-2">Copyright</h2>
+          <p>
+            You must be the author of the submitted instants and have the rights to publish them. The instants must be free of third party rights. Participants retain all copyright in their submitted instants. By submitting instants to the
+            competition, participants grant the organizers a non-exclusive license to use, reproduce and publish the submitted images in connection with the promotion of the competition, including on social media platforms, websites and printed
+            materials. The organizers will credit the participants wherever practical and reasonable.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-notable text-2xl mb-2">Announcement of Winners</h2>
+          <p>
+            The winners of the competition will be announced on the official website and/or social media platforms of the organizers. By participating in the competition, the winners consent to the publication of their names and submitted photos for
+            promotional purposes.
+          </p>
+        </div>
+      </div>
+      <!-- -------- -->
       <p>The short version: Participants have to be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest.</p>
     </div>
     <div class="w-65 lg:col-start-3 lg:col-span-4 lg:row-start-4 lg:w-80"><img src="/step3.webp" alt="step 1" /></div>
