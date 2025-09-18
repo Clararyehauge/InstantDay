@@ -18,7 +18,7 @@
     </button>
     <div class="hidden lg:flex">
       <ul class="lg:flex flex-row justify-evenly gap-6 font-instrument-sans">
-        <li class=""><a class="group hover:text-prim-500" href="/index/"> Home<div class="bg-prim-500 h-[2px] w-0 group-hover:w-full transition-all duration-300"></div></a></li>
+        <li class=""><a class="group hover:text-prim-500" href="/"> Home<div class="bg-prim-500 h-[2px] w-0 group-hover:w-full transition-all duration-300"></div></a></li>
 
         <li class=""><a class="group hover:text-prim-500" href="/info/"> Info<div class="bg-prim-500 h-[2px] w-0 group-hover:w-full transition-all duration-300"></div></a></li>
 
@@ -30,16 +30,7 @@
       </ul>
     </div>
   </div>
-  <div
-    x-show="open"
-    x-transition:enter="transition transform origin-top duration-300 ease-out"
-    x-transition:enter-start="scale-y-0 opacity-0"
-    x-transition:enter-end="scale-y-100 opacity-100"
-    x-transition:leave="transition transform origin-top duration-200 ease-in"
-    x-transition:leave-start="scale-y-100 opacity-100"
-    x-transition:leave-end="scale-y-0 opacity-0"
-    class="lg:hidden"
-  >
+  <div x-show="open" x-transition:enter="transition transform origin-top duration-300 ease-out" x-transition:enter-start="scale-y-0 opacity-0" x-transition:enter-end="scale-y-100 opacity-100" x-transition:leave="transition transform origin-top duration-200 ease-in" x-transition:leave-start="scale-y-100 opacity-100" x-transition:leave-end="scale-y-0 opacity-0" class="lg:hidden">
     <ul class="font-instrument-sans text-center pb-5 flex flex-col gap-4">
       <li class=""><a href="/index/">Home</a></li>
       <li class=""><a href="/info/">Info</a></li>
